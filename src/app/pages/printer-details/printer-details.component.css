@@ -1,0 +1,22 @@
+.imagen {
+  width: 35vw;
+  border-radius: 10px;
+  @media screen and (max-width: 576px) {
+    width: 90vw;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.descripcion {
+  @media screen and (max-width: 576px) {
+    padding-top: 20px;
+  }
+}
+
+h3 {
+  color: aqua;
+}

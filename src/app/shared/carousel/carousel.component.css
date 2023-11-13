@@ -1,0 +1,47 @@
+/* .imagenes {
+  max-width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+  opacity: 0.5;
+  @media screen and (max-width: 576px) {
+    height: 25vh;
+  }
+} */
+
+.imagenes {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  opacity: 0.5;
+  @media screen and (max-width: 576px) {
+    height: 20vh;
+  }
+}
+
+.contenedor {
+  text-align: center;
+}
+
+.textImg{
+  opacity: 1;
+  z-index: 10;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 576px) {
+    top: 70%;
+  }
+}
+
+.titleImg {
+  @media screen and (max-width: 576px) {
+    font-size: 11pt;
+  }
+}
+
+.descrip {
+  @media screen and (max-width: 576px) {
+    font-size: 9pt;
+  }
+}

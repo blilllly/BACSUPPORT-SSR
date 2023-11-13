@@ -1,0 +1,21 @@
+<div class="card printer-card">
+  <div class="card-header">
+    <h5 class="card-title">{{printer.marca}} {{printer.modelo}}</h5>
+  </div>
+  <div class="card-body">
+    <img
+      class="imagen"
+      src="{{printer.alt_img}}"
+      alt="{{printer.marca}} {{printer.modelo}}">
+    <p class="card-text">{{printer.descrip_corta}}</p>
+  </div>
+  <div class="card-footer text-end">
+    <button
+      (click)="scroll()"
+      [routerLink]="['/printer-details', printer.id]"
+      type="button"
+      class="btn btn-info btn-sm printer-boton">
+      Detalles
+    </button>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+.logos {
+  font-size: 20px;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.logos .whatsapp:hover {
+  color: #25d366;
+}
+
+.logos .youtube:hover {
+  color: #FF0000;
+}
+
+.logos .instagram:hover {
+  color: #E1306C;
+}
+
+.logos .mail:hover {
+  color: #c71610;
+}
+
+.logos .tiktok:hover {
+  color: #000000;
+}
+
+.footer {
+  margin: auto;
+  max-width: 90vw;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+}
+
+footer h4 {
+  font-size: 15pt;
+  /* font-weight: bold; */
+}
+
+footer .light {
+  font-weight: 100;
+}
+
+footer .medium {
+  font-weight: 600;
+}
+
+footer a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.portfolio .light{
+  margin: auto 0 auto 0;
+  font-size: 11pt;
+  @media screen and (max-width: 576px) {
+    font-size: 8pt;
+  }
+}
+
+.map {
+  border-radius: 4px;
+}
+
+.github {
+  font-size: 24px;
+}
+
+h4 {
+  color: aqua;
+}

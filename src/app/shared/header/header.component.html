@@ -1,0 +1,90 @@
+<div class="bg-dark container-fluid">
+  <div class="row">
+    <div class="col-9 text-start">
+      <span class="ms-2 telef">
+        <i class="ri-whatsapp-line"></i>
+        <a class="telef"
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone={{numero1.numero}}&text=Buenas, deseo información.">
+          {{numero1.mostrar}}
+        </a>-
+        <a class="telef"
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone={{numero2.numero}}&text=Buenas, deseo información.">
+          {{numero2.mostrar}}
+        </a></span>
+    </div>
+    <div class="col-3 text-end">
+      <span class="dropdown-toggle me-2"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+          <strong>Contacto</strong>
+      </span>
+      <ul class="dropdown-menu">
+        <li><a href="https://api.whatsapp.com/send?phone={{numero1.numero}}&text=Buenas, deseo información." class="dropdown-item" target="_blank">Whatsapp</a></li>
+        <li><a class="dropdown-item" href="mailto:{{correo}}?subject=Información%20&body=Buenas,%20deseo%20información.">Correo</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light-subtle">
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 name" [routerLink]="'/home'">BAC SUPPORT</a>
+
+      <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          @for (item of NavBarMenu; track $index) {
+            <li class="nav-item ms-3"
+              [ngClass]="{'dropdown': item.subItems}">
+              @if (item.subItems) {
+                <a class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                    <i class="{{item.emoji}}"></i>
+                    {{item.texto | uppercase }}
+                </a>
+                <ul class="dropdown-menu">
+                  @for (subItem of item.subItems; track $index) {
+                    <li>
+                      <div>
+                        <a class="dropdown-item"
+                          [routerLink]="subItem.ruta"
+                          (click)="closeNavbar()">
+                          <i class="{{subItem.emoji}}"></i>
+                          {{subItem.texto | uppercase}}
+                        </a>
+                      </div>
+                    </li>
+                  }
+                </ul>
+              }@else {
+                <a class="nav-link"
+                  [routerLink]="item.ruta"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  (click)="closeNavbar()">
+                    <i class="{{item.emoji}}"></i>
+                    {{ item.texto | uppercase }}
+                </a>
+              }
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

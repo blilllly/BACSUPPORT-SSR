@@ -1,0 +1,11 @@
+<swiper-container
+  [slidesPerView]="slidesPerView"
+  loop="true"
+  autoplay-delay="8000"
+  autoplay-disable-on-interaction="false">
+  @for (testimony of testimonials; track $index) {
+    <swiper-slide>
+      <app-testimonial-card  [testimony]="testimony"></app-testimonial-card>
+    </swiper-slide>
+  }
+</swiper-container>

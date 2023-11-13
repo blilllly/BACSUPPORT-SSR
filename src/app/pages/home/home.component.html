@@ -1,0 +1,72 @@
+<div class="container animate__animated animate__fadeIn">
+
+  <div class="row pt-5 text-center">
+    <h3>¿Quienes Somos?</h3>
+    <p>En BAC SUPPORT, somos un equipo apasionado y dedicado a proporcionar soluciones de impresión excepcionales. Nuestra misión es simplificar su experiencia con impresoras RICOH, ofreciendo productos y servicios de calidad que satisfagan sus necesidades.</p>
+    <p class="text-start">Con años de experiencia en el campo, nos enorgullece ser su socio confiable en soluciones de impresión. Nuestro compromiso con la calidad, el servicio al cliente y la satisfacción del cliente son los pilares de nuestra empresa.</p>
+    <p class="text-end"><strong>Descubra cómo BAC SUPPORT puede hacer que su experiencia de impresión sea más sencilla y eficiente. Bienvenido a nuestra familia.</strong></p>
+  </div>
+
+  <div class="row pt-3 cartas">
+    <div class="col-lg-4 col-sm-6 card-seccion"
+      routerLink="/printers"
+      (click)="scrollToTop()">
+      <i class="ri-store-3-fill icon"></i>
+      <h5>Venta</h5>
+      <p>Descubra nuestra selección de impresoras RICOH de alta calidad disponibles para compra.</p>
+    </div>
+    <div class="col-lg-4 col-sm-6 card-seccion"
+      routerLink="/rent"
+      (click)="scrollToTop()">
+      <i class="ri-money-dollar-circle-line icon"></i>
+      <h5>Alquiler</h5>
+      <p>Simplificamos el alquiler de impresoras RICOH para su comodidad.</p>
+    </div>
+    <div class="col-lg-4 col-sm-6 card-seccion card3"
+      routerLink="/technical-service"
+      (click)="scrollToTop()">
+      <i class="ri-tools-fill icon"></i>
+      <h5>Servicio Técnico</h5>
+      <p>Mantenimiento experto para mantener sus impresoras en óptimas condiciones.</p>
+    </div>
+    <div class="col-lg-4 col-sm-6 card-seccion card4"
+      routerLink="/supplies"
+      (click)="scrollToTop()">
+      <i class="ri-shopping-bag-line icon"></i>
+      <h5>Repuestos y Suministros</h5>
+      <p>Acceda a una variedad de repuestos y suministros de calidad para sus impresoras.</p>
+    </div>
+  </div>
+
+  <div class="row pt-5 text-center">
+    <h3 class="pb-3">Equios RICOH Disponibles</h3>
+    <app-printer-carousel></app-printer-carousel>
+  </div>
+
+  <div class="row pt-5">
+    <h3>Nuestras Marcas</h3>
+    <p class="pt-3 pb-3">Solo trabajamos con las marcas más destacadas del mercado. Nos comprometemos a proporcionar a nuestros clientes repuestos y suministros de la más alta calidad para sus impresoras</p>
+    <app-brands-carousel></app-brands-carousel>
+  </div>
+
+  <div class="row text-center pt-5 pb-3">
+    <h3>Testimonios y Reseñas</h3>
+    <p>Tenemos la totalidad de la confianza de nuestros clientes y puede verificarlo usted mismo en esta sección.</p>
+  </div>
+  <app-testimonial-carousel [testimonials]="testimonials"></app-testimonial-carousel>
+
+  <div class="row pt-5 align-items-center">
+    <h3 class="text-center"> Contacto Fácil</h3>
+    <div class="col-lg-6 col-sm-12">
+      <p>¿Listo para mejorar sus soluciones de impresión? Contáctenos. Estamos listos para ayudarlo. Llámenos, envíenos un correo o complete nuestro formulario de contacto.<br><strong>Simplifiquemos sus necesidades de impresión con BAC SUPPORT.</strong></p>
+    </div>
+    <div class="col-lg-3 col-6 text-center">
+      <a href="https://api.whatsapp.com/send?phone={{numero1.numero}}&text=Buenas, deseo información."
+        class="contac-ws" target="_blank"><i class="ri-whatsapp-line"></i></a>
+    </div>
+    <div class="col-lg-3 col-6 text-center">
+      <a class="contac-mail" href="mailto:{{correo}}?subject=Información%20&body=Buenas,%20deseo%20información."><i class="ri-mail-line"></i></a>
+    </div>
+  </div>
+
+</div>

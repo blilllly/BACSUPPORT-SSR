@@ -1,0 +1,13 @@
+<swiper-container
+  [slidesPerView]="slidesPerView"
+  loop="true"
+  autoplay-delay="3000"
+  autoplay-disable-on-interaction="false">
+    @for (brand of brands; track $index) {
+      <swiper-slide>
+        <div class="item-card">
+          <img class="img" src="{{brand.img}}" alt="{{brand.alt}}">
+        </div>
+      </swiper-slide>
+    }
+</swiper-container>

@@ -1,0 +1,20 @@
+<div class="card testimonial-card">
+  <div class="card-header">
+    @for (star of getStars(testimony.score); track $index) {
+      <i [ngClass]="star"></i>
+    }
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{testimony.title}}</h5>
+    <p class="card-text">{{testimony.prg}}</p>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-3"><img class="user-img rounded-circle" src="{{testimony.img}}" alt=""></div>
+      <div class="col-9">
+        <strong>{{testimony.name}}</strong><br>
+        <span>{{testimony.job}}</span>
+      </div>
+    </div>
+  </div>
+</div>

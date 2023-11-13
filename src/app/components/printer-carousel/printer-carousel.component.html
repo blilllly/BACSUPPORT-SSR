@@ -1,0 +1,22 @@
+<!-- <p-carousel [value]="printers"
+  [numVisible]="4"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="10000"
+  [responsiveOptions]="responsiveOptions">
+  <ng-template let-printer pTemplate="item">
+    <app-printer-card [printer]="printer"></app-printer-card>
+  </ng-template>
+</p-carousel> -->
+
+<swiper-container
+  [slidesPerView]="slidesPerView"
+  loop="true"
+  autoplay-delay="8000"
+  autoplay-disable-on-interaction="false">
+  @for (printer of printers; track $index) {
+    <swiper-slide>
+      <app-printer-card [printer]="printer"></app-printer-card>
+    </swiper-slide>
+  }
+</swiper-container>
