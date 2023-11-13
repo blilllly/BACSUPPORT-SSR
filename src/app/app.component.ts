@@ -6,7 +6,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
 
 @Component({
   selector: 'app-root',
@@ -23,5 +22,8 @@ import { register } from 'swiper/element/bundle';
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
+  ngAfterViewInit(){
+    setTimeout(()=>{register();},1000)
+  }
   title = 'BACSUPPORTSSR';
 }

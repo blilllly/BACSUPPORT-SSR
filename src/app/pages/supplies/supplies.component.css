@@ -1,0 +1,32 @@
+h3 {
+  color: aqua;
+}
+
+.contac-ws {
+  color: #25d366;
+  text-decoration: none;
+  font-size: 150px;
+  @media screen and (max-width: 576px) {
+    font-size:  60px;
+  }
+}
+
+.contac-ws :hover {
+  cursor: pointer;
+}
+.contac-ws :active {
+  color: #0a8136;
+}
+
+.contac-mail {
+  color: #c71610;
+  text-decoration: none;
+  font-size: 150px;
+  @media screen and (max-width: 576px) {
+    font-size:  60px;
+  }
+}
+
+.contac-mail :active {
+  color: #a0110c;
+}

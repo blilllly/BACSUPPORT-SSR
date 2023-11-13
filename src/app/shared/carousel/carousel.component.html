@@ -1,36 +1,3 @@
-<!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-indicators">
-    @for (item of Imagenes; track $index) {
-      <button type="button"
-        [attr.data-bs-target]="'#carouselExampleAutoplaying'"
-        [attr.data-bs-slide-to]="$index"
-        [ngClass]="{'active': $index === 0 }"
-        [attr.aria-label]="'Slide '+ ($index+1) ">
-      </button>
-    }
-  </div>
-  <div class="carousel-inner">
-    @for (item of Imagenes; track $index) {
-      <div class="carousel-item"
-        [ngClass]="{'active': $index === 0}">
-        <img src="{{item.ruta}}" class="imagenes d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block text-white">
-          <h5>{{item.titulo}}</h5>
-          <p>{{item.descripcion}}</p>
-        </div>
-      </div>
-    }
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
-
 <swiper-container
   style="--swiper-pagination-color: #1f1d1d"
   slides-per-view="1"

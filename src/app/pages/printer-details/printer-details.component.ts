@@ -34,21 +34,21 @@ export class PrinterDetailsComponent {
     }, 200);
   }
 
-  // ngOnInit(): void {
-  //   this.activatedRoute.params
-  //     .subscribe(params => {
-  //       const id = +params['id'];
+  ngOnInit(): void {
+    this.activatedRoute.params
+      .subscribe(params => {
+        const id = +params['id'];
 
-  //       this.printersService.getPrinterXId(id)
-  //         .subscribe({
-  //           next: (printer: Printer) => {
-  //             this.printer = printer;
-  //           },
-  //           error: (error) => {
-  //             console.error(error);
-  //           }
-  //         });
-  //     });
-  // }
+        this.printersService.getPrinterXId(id)
+          .subscribe({
+            next: (printer: Printer) => {
+              this.printer = printer;
+            },
+            error: (error) => {
+              console.error(error);
+            }
+          });
+      });
+  }
 
 }

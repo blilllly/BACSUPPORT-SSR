@@ -1,8 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
 
 interface Brand {
   img: string;
@@ -31,10 +28,6 @@ export class BrandsCarouselComponent {
 
   slidesPerView: number = 4;
   screenWidth!: number;
-
-  // ngAfterViewInit() {
-  //   register();
-  // }
 
   ngOnInit(){
     if(typeof window !== "undefined"){

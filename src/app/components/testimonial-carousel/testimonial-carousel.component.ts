@@ -2,10 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Testimony } from '../../interfaces/printer.interface';
 import { TestimonialCardComponent } from '../testimonial-card/testimonial-card.component';
-// import function to register Swiper custom elements
-import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-// register();
 
 @Component({
   selector: 'app-testimonial-carousel',
@@ -21,10 +17,6 @@ export class TestimonialCarouselComponent {
 
   slidesPerView: number = 3;
   screenWidth!: number;
-
-  // ngAfterViewInit() {
-  //   register();
-  // }
 
   ngOnInit(){
     if(typeof window !== "undefined"){

@@ -1,10 +1,8 @@
-import { Component, OnInit, inject, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Printer } from '../../interfaces/printer.interface';
 import { PrintersService } from '../../services/printers.service';
 import { PrinterCardComponent } from '../printer-card/printer-card.component';
-import { register } from 'swiper/element/bundle';
-
 
 @Component({
   selector: 'app-printer-carousel',
@@ -22,10 +20,6 @@ export class PrinterCarouselComponent {
   printers: Printer[] = [];
 
   constructor(private printersService: PrintersService) {}
-
-  ngAfterViewInit() {
-    register();
-  }
 
   ngOnInit(): void {
     this.printersService.getPrinters()
