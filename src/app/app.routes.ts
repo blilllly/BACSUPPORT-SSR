@@ -8,6 +8,7 @@ import { TechnicalServiceComponent } from './pages/technical-service/technical-s
 import { PrinterDetailsComponent } from './pages/printer-details/printer-details.component';
 
 export const routes: Routes = [
+  { path: '' , redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'printers', component: PrintersComponent },
   { path: 'rent', component: RentComponent },

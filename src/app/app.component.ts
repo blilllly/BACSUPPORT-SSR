@@ -1,11 +1,14 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+
 import { CarouselComponent } from './shared/carousel/carousel.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+
 
 @Component({
   selector: 'app-root',
@@ -13,17 +16,27 @@ import { register } from 'swiper/element/bundle';
   imports: [
     CommonModule,
     RouterOutlet,
-    HeaderComponent,
+    CarouselComponent,
     FooterComponent,
-    CarouselComponent
+    HeaderComponent,
+    LoadingSpinnerComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppComponent {
-  ngAfterViewInit(){
-    setTimeout(()=>{register();},1000)
-  }
+export class AppComponent{
   title = 'BACSUPPORTSSR';
+  isLoaded: boolean;
+
+  constructor (){
+    this.isLoaded = false;
+  }
+
+  ngOnInit() {
+    setTimeout(()=>{
+      this.isLoaded = true;
+    },3000)
+    register();
+  }
 }
